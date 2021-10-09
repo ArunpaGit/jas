@@ -13,8 +13,8 @@ export async function getStaticProps(){
     props: {
       doctors: res.items
     },
-    revalidate: 10
-  }
+    revalidate: 30
+  } 
 }
 export default function Recipes({doctors}) {
   //console.log(doctors)
