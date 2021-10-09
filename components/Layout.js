@@ -20,7 +20,7 @@ export default function Layout({ children }) {
       </div>
 
       <footer>
-        <p>Copyright 2021 Just Add Marmite :)</p>
+        <p>Copyright 2021 JAS on JAM Stack</p>
       </footer>
     </div>
   )
