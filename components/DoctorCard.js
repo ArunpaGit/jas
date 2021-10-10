@@ -16,6 +16,7 @@ export default function DoctorCard({ doctor }) {
           <div className="info">
             <h5>{ title }</h5>
              <p> { specialization } </p>
+             <p> { timing } </p>
           </div>
           <div className="actions">
             <Link href={'/doctors/' + slug}><a>Book..</a></Link>
