@@ -17,7 +17,7 @@ export async function getStaticProps(){
   } 
 }
 export default function Recipes({doctors}) {
-  //console.log(doctors)
+  console.log(doctors)
   return (
     <div className="recipe-list">
       {doctors.map(doctor => (

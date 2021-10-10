@@ -2,7 +2,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 export default function DoctorCard({ doctor }) {
-    const { title, slug, timing, thumbnail } = doctor.fields
+    const { title, slug, timing, thumbnail, specialization } = doctor.fields
     return (
         <div className="card">
          <div className="featured">
@@ -15,7 +15,7 @@ export default function DoctorCard({ doctor }) {
         <div className="content">
           <div className="info">
             <h4>{ title }</h4>
-            <p>Consulting time { timing } Sunday Holiday</p>
+             <p> { specialization } </p>
           </div>
           <div className="actions">
             <Link href={'/doctors/' + slug}><a>Details</a></Link>
