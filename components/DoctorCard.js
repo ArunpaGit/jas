@@ -14,11 +14,11 @@ export default function DoctorCard({ doctor }) {
         </div>
         <div className="content">
           <div className="info">
-            <h4>{ title }</h4>
+            <h5>{ title }</h5>
              <p> { specialization } </p>
           </div>
           <div className="actions">
-            <Link href={'/doctors/' + slug}><a>Details</a></Link>
+            <Link href={'/doctors/' + slug}><a>Book..</a></Link>
           </div>
         </div>
         <style jsx>{`
@@ -36,7 +36,7 @@ export default function DoctorCard({ doctor }) {
         .info {
           padding: 16px;
         }
-        .info h4 {
+        .info h5 {
           margin: 4px 0;
           text-transform: uppercase;
         }
