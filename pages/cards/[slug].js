@@ -34,16 +34,25 @@ export const getStaticProps = async ({ params }) => {
     'fields.slug': params.slug    
   })
 
+  if (!items.length) {
+    return {
+      redirect: {
+        destination: '/',
+        permanent: false,
+      },
+    }
+  }
+  
   return {
-    props: { doctor: items[0] },
+    props: { card: items[0] },
     revalidate: 10
   }
 
 }
 
-export default function RecipeDetails({ doctor }) {
-  if (!doctor) return <Skeleton/>
-  const { featuredImage, title, timing, consultationFee, details } = doctor.fields
+export default function CardDetails({ card }) {
+  if (!card) return <Skeleton/>
+  const { featuredImage, title, timing, consultationFee, details } = card.fields
   //console.log(details)
 
   return (
@@ -58,7 +67,7 @@ export default function RecipeDetails({ doctor }) {
     </div>
 
     <div className="info">
-      <p>Cunsultation Fee is  { consultationFee } per visit.</p>
+      <p>Rate is  { consultationFee } </p>
       <h3>Timing:</h3>
 
       {timing.map(ing => (

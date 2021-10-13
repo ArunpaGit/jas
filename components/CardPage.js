@@ -1,8 +1,8 @@
 import Link from 'next/link'
 import Image from 'next/image'
 
-export default function DoctorCard({ doctor }) {
-    const { title, slug, timing, thumbnail, specialization } = doctor.fields
+export default function CardPage({ card }) {
+    const { title, slug, timing, thumbnail, specialization } = card.fields
     return (
         <div className="card">
          <div className="featured">
@@ -19,7 +19,7 @@ export default function DoctorCard({ doctor }) {
              <p> { timing } </p>
           </div>
           <div className="actions">
-            <Link href={'/doctors/' + slug}><a>Book..</a></Link>
+            <Link href={'/cards/' + slug}><a>Book..</a></Link>
           </div>
         </div>
         <style jsx>{`

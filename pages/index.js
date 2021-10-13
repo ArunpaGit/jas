@@ -1,5 +1,5 @@
 import { createClient } from "contentful"
-import DoctorCard from '../components/DoctorCard'
+import Card from '../components/CardPage'
 
 export async function getStaticProps(){
   const client = createClient({
@@ -11,17 +11,17 @@ export async function getStaticProps(){
   
   return{
     props: {
-      doctors: res.items
+      cards: res.items
     },
     revalidate: 60
   } 
 }
-export default function Recipes({doctors}) {
-  console.log(doctors)
+export default function AllCards({cards}) {
+  //console.log(cards)
   return (
     <div className="recipe-list">
-      {doctors.map(doctor => (
-        <DoctorCard key={doctor.sys.id} doctor={doctor} />
+      {cards.map(card => (
+        <Card key={card.sys.id} card={card} />
       ))}
       <style jsx>{`
         .recipe-list {
