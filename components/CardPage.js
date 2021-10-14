@@ -19,7 +19,7 @@ export default function CardPage({ card }) {
              <p> { timing } </p>
           </div>
           <div className="actions">
-            <Link href={'/cards/' + slug}><a>Book..</a></Link>
+            <Link href={'/cards/' + slug}><a>Details..</a></Link>
           </div>
         </div>
         <style jsx>{`
