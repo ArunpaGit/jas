@@ -5,7 +5,6 @@ export async function getStaticProps(){
   const client = createClient({
     space:process.env.CONTENTFUL_SPACE_ID,
     accessToken:process.env.CONTENTFUL_TOKEN,
-
   })
   const res = await client.getEntries({content_type: process.env.CONTENTFUL_CONTENT_TYPE})
   
@@ -13,11 +12,11 @@ export async function getStaticProps(){
     props: {
       cards: res.items
     },
-    revalidate: 60
+    revalidate: 10
   } 
 }
 export default function AllCards({cards}) {
-  //console.log(cards)
+  console.log(cards)
   return (
     <div className="recipe-list">
       {cards.map(card => (
