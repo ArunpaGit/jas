@@ -4,7 +4,7 @@ export default function Layout({ children }) {
   return (
     <div className="layout">
      <header>
-        <h1>My Panda1</h1>
+        <h1>My Panda</h1>
         
     </header>
 
